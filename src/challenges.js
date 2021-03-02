@@ -18,9 +18,11 @@ function splitSentence(astring) {
 //  https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let thename = name.split(" ");
+  return thename[thename.length-1] + ", " + thename[0];
 }
+// Para resolver o desafio 4 consultei o Slack da turma 10, tribo b
 
 // Desafio 5
 function footballPoints() {
