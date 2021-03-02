@@ -9,12 +9,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(onestring) {
-  let frasepartida = onestring.split(" ");
-  return frasepartida;
+function splitSentence(astring) {
+  let phrase = astring.split(" ");
+  return phrase;
 }
-//Para resolver o desafio 3 consultei uma pergunta feita no seguinte site:
-//https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres
+
+//  Para resolver o desafio 3 consultei uma pergunta feita no seguinte site:
+//  https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres
 
 // Desafio 4
 function concatName() {
