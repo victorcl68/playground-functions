@@ -20,7 +20,8 @@ function splitSentence(astring) {
 // Desafio 4
 function concatName(name) {
   let thename = name.split(" ");
-  return thename[thename.length-1] + ", " + thename[0];
+  let printed = thename[thename.length - 1] + ", " + thename[0]
+  return printed;
 }
 // Para resolver o desafio 4 consultei o Slack da turma 10, tribo b
 
