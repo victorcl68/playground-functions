@@ -1,14 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  // seu código aqui
-  if (value1 == false && value2 == true || value1 == true && value2 == false) {
-    return false;
-  }
-  else if (value1 == false && value2 == false) {
-    return false;
+  if (value1 && value2) {
+    return true;
   }
   else {
-    return true;
+    return false;
   }
 }
 
