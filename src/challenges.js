@@ -19,11 +19,8 @@ function splitSentence(astring) {
 
 // Desafio 4
 function concatName(name) {
-  let thename = name.split(' ');
-  let printed = `${thename[thename.length - 1]}, ${thename[0]}`;
-  return printed;
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
-console.log(concatName('Victor Lopes Cardoso'));
 // Para resolver o desafio 4 consultei o Slack da turma 10, tribo b
 
 // Desafio 5
