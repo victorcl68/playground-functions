@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(astring) {
-  let phrase = astring.split(" ");
+  let phrase = astring.split(' ');
   return phrase;
 }
 
@@ -19,10 +19,11 @@ function splitSentence(astring) {
 
 // Desafio 4
 function concatName(name) {
-  let thename = name.split(" ");
-  let printed = thename[thename.length - 1] + ", " + thename[0]
+  let thename = name.split(' ');
+  let printed = `${thename[thename.length - 1]}, ${thename[0]}`;
   return printed;
 }
+console.log(concatName('Victor Lopes Cardoso'));
 // Para resolver o desafio 4 consultei o Slack da turma 10, tribo b
 
 // Desafio 5
