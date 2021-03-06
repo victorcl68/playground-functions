@@ -24,8 +24,9 @@ function concatName(name) {
 // Para resolver o desafio 4 consultei o Slack da turma 10, tribo b
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let victories = wins * 3;
+  return victories + ties;
 }
 
 // Desafio 6
