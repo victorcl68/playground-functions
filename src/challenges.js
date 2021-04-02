@@ -14,8 +14,8 @@ function splitSentence(astring) {
   return phrase;
 }
 
-//  Para resolver o desafio 3 consultei uma pergunta feita no seguinte site:
-//  https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres
+/* Para resolver este desafio (3) consultei uma pergunta feita no seguinte site:
+https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres */
 
 // Desafio 4
 function concatName(name) {
@@ -58,21 +58,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayfb) {
-  for (let index = 0; index < arrayfb.length; index += 1) {
-    if (arrayfb[index] % 15 === 0) {
-      arrayfb[index] = 'fizzBuzz';
-    } else if (arrayfb[index] % 3 === 0) {
-      arrayfb[index] = 'fizz';
-    } else if (arrayfb[index] % 5 === 0) {
-      arrayfb[index] = 'buzz';
-    } else {
-      arrayfb[index] = 'bug!';
-    }
+const verifyFizzBuzz = (theNumber) => {
+  if (theNumber % 15 === 0) {
+    return 'fizzBuzz';
   }
-  return arrayfb;
+  if (theNumber % 3 === 0) {
+    return 'fizz';
+  }
+  if (theNumber % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+};
+
+function fizzBuzz(numberArray) {
+  let output = [];
+  for (let index = 0; index < numberArray.length; index += 1) {
+    output.push(verifyFizzBuzz(numberArray[index]));
+  }
+  return output;
 }
-console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* Para resolução desse exercício criei outra função para verificar as condições por fora e diminuir a complexidade da minha função principal,
+tive essa ideia olhando o Github de meus colegas dentre eles o Lucas Ribeiro!; */
 
 // Desafio 9
 function encode() {
