@@ -67,9 +67,10 @@ function hydrate(string) {
   for (let index = 0; index < num.length; index += 1) {
     water += parseInt(num[index], 10);
   }
-  let message = '';
-  message = `${water} copos de água`;
-  return message;
+  if (water === 1) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água`;
 }
 // Tive o entendimento sobre as 'RegExp' principalmente pelo site:
 // https://www.luiztools.com.br/post/15-dicas-e-truques-da-linguagem-javascript/#6
