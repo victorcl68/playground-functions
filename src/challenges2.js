@@ -39,8 +39,8 @@ function generatePhoneNumber(num) {
   }
   num.splice(0, 0, '(');
   num.splice(3, 0, ')');
-  num.splice(10, 0, '-');
   num.splice(4, 0, ' ');
+  num.splice(10, 0, '-');
   const numFinal = num.join('');
   return numFinal;
 }
