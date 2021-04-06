@@ -60,11 +60,19 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(5, 2, 1));
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let num = string.replace(/\D/g, '');
+  let water = 0;
+  for (let index = 0; index < num.length; index += 1) {
+    water += parseInt(num[index], 10);
+  }
+  let message = '';
+  message = `${water} copos de água`;
+  return message;
 }
+// Tive o entendimento sobre as 'RegExp' principalmente pelo site:
+// https://www.luiztools.com.br/post/15-dicas-e-truques-da-linguagem-javascript/#6
 
 module.exports = {
   generatePhoneNumber,
