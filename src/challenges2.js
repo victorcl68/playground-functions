@@ -1,5 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
 // Desafio 10
 function techList(theArray, theString) {
   let output = [];
