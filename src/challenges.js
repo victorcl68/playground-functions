@@ -83,16 +83,24 @@ tive essa ideia olhando o Github de meus colegas dentre eles o Lucas Ribeiro!; *
 
 // Desafio 9
 const objEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-function VerifyIndexAndCount(arrToEncodeAndDecode, index, count) {
+const objDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
+function VerifyIndexAndCountEncode(arrToEncodeAndDecode, index, count) {
   if (arrToEncodeAndDecode[index] === Object.keys(objEncode)[count]) {
     arrToEncodeAndDecode[index] = Object.values(objEncode)[count];
+  }
+}
+
+function VerifyIndexAndCountDecode(arrToEncodeAndDecode, index, count) {
+  if (arrToEncodeAndDecode[index] === Object.keys(objDecode)[count]) {
+    arrToEncodeAndDecode[index] = Object.values(objDecode)[count];
   }
 }
 
 function verifyEncode(arrToEncode) {
   for (let index = 0; index < arrToEncode.length; index += 1) {
     for (let count = 0; count < 5; count += 1) {
-      VerifyIndexAndCount(arrToEncode, index, count);
+      VerifyIndexAndCountEncode(arrToEncode, index, count);
     }
   }
 }
@@ -104,13 +112,9 @@ function encode(stringToEncode) {
 }
 
 function verifyDecode(arrToDecode) {
-  // const objDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   for (let index = 0; index < arrToDecode.length; index += 1) {
     for (let count = 0; count < 5; count += 1) {
-      VerifyIndexAndCount(arrToDecode, index, count);
-      // if (arrToDecode[index] === Object.keys(objDecode)[count]) {
-      //   arrToDecode[index] = Object.values(objDecode)[count];
-      // }
+      VerifyIndexAndCountDecode(arrToDecode, index, count);
     }
   }
 }
