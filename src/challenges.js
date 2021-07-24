@@ -78,15 +78,14 @@ function fizzBuzz(numberArray) {
   }
   return output;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 /* Para resolução desse exercício criei outra função para verificar as condições por fora e diminuir a complexidade da minha função principal,
 tive essa ideia olhando o Github de meus colegas dentre eles o Lucas Ribeiro!; */
 
 // Desafio 9
 const objEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-function VerifyIndexAndCount(arrToEncode, index, count) {
-  if (arrToEncode[index] === Object.keys(objEncode)[count]) {
-    arrToEncode[index] = Object.values(objEncode)[count];
+function VerifyIndexAndCount(arrToEncodeAndDecode, index, count) {
+  if (arrToEncodeAndDecode[index] === Object.keys(objEncode)[count]) {
+    arrToEncodeAndDecode[index] = Object.values(objEncode)[count];
   }
 }
 
@@ -104,16 +103,17 @@ function encode(stringToEncode) {
   return arrayToEncode.join('');
 }
 
-const verifyDecode = (arrToDecode) => {
-  const objDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+function verifyDecode(arrToDecode) {
+  // const objDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   for (let index = 0; index < arrToDecode.length; index += 1) {
     for (let count = 0; count < 5; count += 1) {
-      if (arrToDecode[index] === Object.keys(objDecode)[count]) {
-        arrToDecode[index] = Object.values(objDecode)[count];
-      }
+      VerifyIndexAndCount(arrToDecode, index, count);
+      // if (arrToDecode[index] === Object.keys(objDecode)[count]) {
+      //   arrToDecode[index] = Object.values(objDecode)[count];
+      // }
     }
   }
-};
+}
 
 function decode(stringToDecode) {
   const arrayToDecode = stringToDecode.split(['']);
