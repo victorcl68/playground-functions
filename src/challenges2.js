@@ -54,7 +54,6 @@ function generatePhoneNumber(num) {
   const numFinal = num.join('');
   return numFinal;
 }
-console.log(generatePhoneNumber([-4, 1, 1, 3, 4, 5, 6, 7, 8, 9, 0]));
 
 // Desafio 12
 const firstCondition = (lineA, lineB, lineC) => {
