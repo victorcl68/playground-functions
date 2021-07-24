@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return answer;
 }
 
-// Desafio 8
+// Desafio  8
 const verifyFizzBuzz = (theNumber) => {
   if (theNumber % 15 === 0) {
     return 'fizzBuzz';
