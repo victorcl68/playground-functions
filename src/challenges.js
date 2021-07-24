@@ -83,16 +83,20 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 tive essa ideia olhando o Github de meus colegas dentre eles o Lucas Ribeiro!; */
 
 // Desafio 9
-const verifyEncode = (arrToEncode) => {
-  const objEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+const objEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+function VerifyIndexAndCount(arrToEncode, index, count) {
+  if (arrToEncode[index] === Object.keys(objEncode)[count]) {
+    arrToEncode[index] = Object.values(objEncode)[count];
+  }
+}
+
+function verifyEncode(arrToEncode) {
   for (let index = 0; index < arrToEncode.length; index += 1) {
     for (let count = 0; count < 5; count += 1) {
-      if (arrToEncode[index] === Object.keys(objEncode)[count]) {
-        arrToEncode[index] = Object.values(objEncode)[count];
-      }
+      VerifyIndexAndCount(arrToEncode, index, count);
     }
   }
-};
+}
 
 function encode(stringToEncode) {
   const arrayToEncode = stringToEncode.split(['']);
@@ -110,8 +114,8 @@ const verifyDecode = (arrToDecode) => {
     }
   }
 };
+
 function decode(stringToDecode) {
-  // seu código aqui
   const arrayToDecode = stringToDecode.split(['']);
   verifyDecode(arrayToDecode);
   return arrayToDecode.join('');
