@@ -54,18 +54,31 @@ function generatePhoneNumber(num) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+const firstCondition = (lineA, lineB, lineC) => {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
   }
+};
+const secondCondition = (lineA, lineB, lineC) => {
   if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     return true;
   }
+};
+const thirdCondition = (lineA, lineB, lineC) => {
   if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+};
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (firstCondition(lineA, lineB, lineC)
+  || secondCondition(lineA, lineB, lineC)
+  || thirdCondition(lineA, lineB, lineC)) {
     return true;
   }
   return false;
 }
+
 // Desafio 13
 function hydrate(string) {
   let num = string.replace(/\D/g, '');
