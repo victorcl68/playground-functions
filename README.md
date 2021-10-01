@@ -27,14 +27,6 @@ Para se utilizar do projeto é necessário executar as funções contidas nos ar
 
 ---
 
-## Linter
-
-Para garantir a qualidade do código, foi utilizado neste projeto os linters `ESLint` e `StyleLint`.
-Assim o código se manteve alinhado com as boas práticas de desenvolvimento, sendo mais legível
-e de fácil manutenção!
-
----
-
  # Funções (function):
  
    - 1 - Função com operador `&&` chamada "compareTrue" que, ao receber dois booleanos:
