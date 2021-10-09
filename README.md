@@ -27,7 +27,7 @@ Para se utilizar do projeto é necessário executar as funções contidas nos ar
 
 ---
 
- # Funções (function):
+ # Funções (functions):
  
    - 1 - Função com operador `&&` chamada "compareTrue" que, ao receber dois booleanos:
 
